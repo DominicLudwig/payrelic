@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
   setTimeout(function(){
     iteration = 0;
     maxIterations = 20;
+    toggle = false;
     waiting();
   }, (maxIterations*waitingSpeed)+(textToType.length*typingSpeed)+typingSpeed);
 });
