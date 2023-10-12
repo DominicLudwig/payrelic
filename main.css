@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;600&display=swap');
 
 *{
     margin: 0px;
@@ -6,8 +6,7 @@
 }
 
 body{
-    font-family: 'Exo', sans-serif;
-}
+    font-family: 'Inconsolata', monospace;
 
 
 .context {
@@ -21,8 +20,15 @@ body{
     text-align: center;
     color: #fff;
     font-size: 50px;
+    font-weight: 600;
 }
 
+.context h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 300;
+}
 
 .area{
     background: #4e54c8;
