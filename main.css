@@ -14,17 +14,14 @@ body{
     position: absolute;
     top:50vh;
     display: flex;
-}
-
-.context-inner {
-    text-align: left;
-    justify-items: center;
+    justify-content: center;
 }
 
 .context-inner h1 {
     color: #fff;
     font-size: 50px;
     font-weight: 600;
+    text-align: left;
 }
 
 .context-inner h1 span {
@@ -32,7 +29,7 @@ body{
 }
 
 .context-inner h2 {
-    text-align: center;
+    text-align: left;
     color: #fff;
     font-size: 32px;
     font-weight: 300;
