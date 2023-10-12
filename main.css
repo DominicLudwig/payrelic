@@ -17,11 +17,11 @@ body{
 }
 
 .context-inner {
+    text-align: left;
     justify-items: center;
 }
 
 .context-inner h1 {
-    text-align: center;
     color: #fff;
     font-size: 50px;
     font-weight: 600;
