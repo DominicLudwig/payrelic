@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
     let text = typingContainer.textContent;
-    if(!toggle) {
+    if(!toggle && text.slice(-1) !== '_') {
        text += '_';
-    }else{
+    }else if(text.slice(-1) === '_'){
        text = text.slice(0, -1);
     }
     toggle = !toggle;
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function typeText() {
     if (charIndex <= textToType.length) {
       let text = typingContainer.textContent;
-      if (text.length > 0) {
+      if (text.length > 0 && text.slice(-1) === '_') {
         text = text.slice(0, -1);
       }
       if (charIndex < textToType.length) {
