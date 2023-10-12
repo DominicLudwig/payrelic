@@ -1,28 +1,29 @@
 document.addEventListener('DOMContentLoaded', function () {
   const textToType = "-> Coming soon.";
   const typingContainer = document.getElementById('typing-container');
-  const typingSpeed = 50;
+  const typingSpeed = 70;
+  const waitingSpeed = 500;
   let charIndex = 0;
   let toggle = false;
   let iteration = 0
-  let maxIterations = 10;
+  let maxIterations = 5;
 
   function waiting() {
     if(iteration >= maxIterations) {
       return;
     }
-    if(charIndex >= textToType.length){
-      let text = typingContainer.textContent;
-      if(!toggle) {
-         text += '_';
-      }else{
-         text = text.slice(0, -1);
-      }
-      toggle = !toggle;
-      iteration++;
-      typingContainer.textContent = text;
+    
+    let text = typingContainer.textContent;
+    if(!toggle) {
+       text += '_';
+    }else{
+       text = text.slice(0, -1);
     }
-    setTimeout(waiting, 500); 
+    toggle = !toggle;
+    iteration++;
+    typingContainer.textContent = text;
+    
+    setTimeout(waiting, waitingSpeed); 
   }
   
   function typeText() {
@@ -41,6 +42,14 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   }
  
-  typeText();
   waiting();
+  setTimeout(function(){
+     typeText();
+  }, maxIterations*waitingSpeed); 
+
+  setTimeout(function(){
+    iteration = 0;
+    maxIterations = 20;
+    waiting();
+  }, (maxIterations*waitingSpeed)+(textToType.length*typingSpeed)+typingSpeed);
 });
