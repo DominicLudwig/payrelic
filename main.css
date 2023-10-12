@@ -23,10 +23,14 @@ body{
     font-weight: 600;
 }
 
-.context h1{
+.context h1 span{
+    font-weight: 300;
+}
+
+.context h2{
     text-align: center;
     color: #fff;
-    font-size: 50px;
+    font-size: 32px;
     font-weight: 300;
 }
 
